@@ -3,6 +3,7 @@
 
 #include <initializer_list>
 #include <exception>
+#include <iterator>
 
 template <typename T>
 class MyVector
@@ -46,7 +47,7 @@ class MyVector
 
     public:
 
-        class iterator
+        class iterator : public std::iterator<std::random_access_itarator_tag,T>
         {
             public:
                 iterator();
